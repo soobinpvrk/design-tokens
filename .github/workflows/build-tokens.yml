@@ -1,0 +1,62 @@
+name: Build Design Tokens
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tokens/**'
+      - 'build.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/build-tokens.yml'
+  pull_request:
+    paths:
+      - 'tokens/**'
+      - 'build.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/build-tokens.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build tokens
+        run: npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: design-tokens-build
+          path: build/
+
+      # On push to main, commit the regenerated platform files back to the repo
+      # so the iOS / Android apps can consume them directly from git.
+      - name: Commit regenerated tokens
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add build/
+          if git diff --cached --quiet; then
+            echo "No token changes to commit."
+          else
+            git commit -m "chore: rebuild design tokens [skip ci]"
+            git push
+          fi

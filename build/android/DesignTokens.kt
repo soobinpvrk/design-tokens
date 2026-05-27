@@ -34,10 +34,6 @@ object DesignTokens {
   val captionSmallFontWeight = 400
   val captionSmallLetterSpacing = 0.5
   val captionSmallLineHeight = 16
-  /** Semantic alias of brand primary */
-  val colorActionPrimary = Color(0xff2563eb)
-  val colorBackgroundDefault = Color(0xffffffff)
-  val colorBackgroundSurface = Color(0xfff1f5f9)
   val colorBlue100 = Color(0xffc6e0ff)
   val colorBlue200 = Color(0xff8dbeff)
   val colorBlue300 = Color(0xff5fa4ff)
@@ -48,9 +44,6 @@ object DesignTokens {
   val colorBlue700 = Color(0xff165fd2)
   val colorBlue800 = Color(0xff1452b8)
   val colorBlue900 = Color(0xff16469e)
-  /** Primary brand color */
-  val colorBrandPrimary = Color(0xff2563eb)
-  val colorBrandSecondary = Color(0xff7c3aed)
   val colorCommon0 = Color(0xffffffff)
   val colorCommon100 = Color(0xff000000)
   val colorGreen100 = Color(0xffa8efd4)
@@ -125,9 +118,6 @@ object DesignTokens {
   val colorTeal700 = Color(0xff088080)
   val colorTeal800 = Color(0xff067070)
   val colorTeal900 = Color(0xff056060)
-  val colorTextDefault = Color(0xff0f172a)
-  val colorTextInverse = Color(0xffffffff)
-  val colorTextMuted = Color(0xff64748b)
   val colorViolet100 = Color(0xffe0d0fc)
   val colorViolet200 = Color(0xffc4a8f8)
   val colorViolet300 = Color(0xffa87ef3)
@@ -168,11 +158,6 @@ object DesignTokens {
   val fillDefault = Color(0xfff3f4f2)
   val fillDisabled = Color(0xffe6e8e4)
   val fillSubtle = Color(0xfffafaf9)
-  val fontSizeBody = 16.sp
-  val fontSizeCaption = 12.sp
-  val fontSizeHeading = 24.sp
-  val fontWeightBold = 700
-  val fontWeightRegular = 400
   val headingLargeFontSize = 24
   val headingLargeFontWeight = 700
   val headingLargeLetterSpacing = -0.5
@@ -212,10 +197,6 @@ object DesignTokens {
   val radius6 = 6
   val radius8 = 8
   val radius999 = 999
-  val radiusFull = 999.dp
-  val radiusLg = 16.dp
-  val radiusMd = 8.dp
-  val radiusSm = 4.dp
   val spacing10 = 10
   val spacing12 = 12
   val spacing16 = 16
@@ -229,11 +210,6 @@ object DesignTokens {
   val spacing6 = 6
   val spacing64 = 64
   val spacing8 = 8
-  val spacingLg = 24.dp
-  val spacingMd = 16.dp
-  val spacingSm = 8.dp
-  val spacingXl = 32.dp
-  val spacingXs = 4.dp
   val statusCautionaryDefault = Color(0xfffd9a04)
   val statusCautionarySubtle = Color(0xfffff4e1)
   val statusNegativeDefault = Color(0xffee404d)

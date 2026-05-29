@@ -205,6 +205,7 @@ object DesignTokens {
   val radiusContainerLarge = 20
   val radiusContainerMedium = 16
   val radiusContainerSmall = 12
+  val radiusContainerTest = 999
   val radiusContainerXlarge = 24
   val spacing10 = 10
   val spacing12 = 12

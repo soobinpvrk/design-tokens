@@ -229,7 +229,8 @@ object DesignTokens {
   val titleSmallLetterSpacing = 0
   val titleSmallLineHeight = 22
   val typographyFontFamilyType = Pretendard
-  val typographyFontSize10 = 10
+  /** test */
+  val typographyFontSize10 = 9
   val typographyFontSize11 = 11
   val typographyFontSize12 = 12
   val typographyFontSize13 = 13

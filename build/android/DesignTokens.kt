@@ -227,6 +227,7 @@ object DesignTokens {
   val statusNegativeSubtle = Color(0xffffedeb)
   val statusPositiveDefault = Color(0xff2c7df0)
   val statusPositiveSubtle = Color(0xffe7f2ff)
+  val test = 2
   val titleLargeFontSize = 18
   val titleLargeFontWeight = 600
   val titleLargeLetterSpacing = 0
